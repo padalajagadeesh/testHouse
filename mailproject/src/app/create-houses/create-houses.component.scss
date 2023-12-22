@@ -1,0 +1,39 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.photo-control {
+  min-height: 300px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px dashed blue;
+  margin: 5px;
+}
+
+.Property-image {
+  border: 1px dotted;
+  width: 76%;
+  height: 148px;
+  img{
+    width: 100%;
+    height: 148px;
+  }
+}
+
+.Propertys_Data {
+  display: flex;
+
+  .Property-Details {
+    width: 50%;
+    line-height: 28px;
+  }
+}
+.card_image img {
+  width: 100%;
+  height: 143px;
+//   object-fit:cover;
+}

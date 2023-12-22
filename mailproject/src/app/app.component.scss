@@ -1,0 +1,119 @@
+.container {
+    color: #8f8a8a;
+    // margin: 9px 0 0;
+}
+
+.nav-iteam {
+    padding: 0;
+    margin: 0;
+}
+
+.user {
+    position: absolute;
+    top: 113%;
+    left: -132px;
+    border-top: 2px solid red;
+
+    li {
+        padding: 5px;
+        border-bottom: 1px solid #f1efeb;
+
+        a:hover {
+            background-color: green;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    .logOut {
+        a {
+            background: red;
+            color: #fff;
+            font-weight: 400;
+            border-radius: 8px;
+            text-align: center;
+        }
+    }
+}
+
+.Navbar-items {
+    ul {
+        // gap: 30px;
+
+        li {
+            // background-color: red;
+            margin-right: 30px;
+
+            a {
+                font-size: 18px;
+                font-weight: 500;
+                color: #000;
+
+            }
+        }
+    }
+
+}
+
+// .myadds{
+//     width: 100px;
+//     background-color: red;
+// }
+
+.header {
+    color: #333;
+    .btn-primary {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+}
+
+.Dark {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.fa-heart{
+    font-size: 18px;
+}
+
+// .rounded-circle {
+//     padding: 50px;
+//     background-color: green;
+//     transition: transform .2s;
+//     /* Animation */
+//     width: 200px;
+//     height: 200px;
+//     margin: 0 auto;
+// }
+
+// .rounded-circle:hover {
+//     background-color: red;
+//     width: 100px;
+//     height: 100px;
+//     transform: scale(1.5);
+// }
+.arrow{
+    color: red;
+    position: absolute;
+    top: -15px;
+    right: 7px;
+    font-size: 12px;
+}
+.img-logo{
+    position: relative;
+}
+
+.Scrolling {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+  }

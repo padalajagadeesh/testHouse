@@ -1,0 +1,91 @@
+<div class="Login_page">
+  <div class="wrapper">
+    <h2>Login</h2>
+    <form action="#" #loginForm='ngForm' (ngSubmit)="OnLogin(loginForm)">
+      <div class="input-box">
+        <input type="text" placeholder="Enter UserName" required ngModel name="Login_Username" required tooltip
+          tooltip-placement="right">
+        <!-- <small id="nameHelp" class="text-danger" *ngIf="loginForm.invalid">Required</small> -->
+        <!-- <div class="error_message" *ngIf="SubmitForm && name?.invalid  && name?.['errors']?.['required']">Uesrname is required</div> -->
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Enter password" required ngModel name="Login_Password">
+        <!-- <div class="error_message" *ngIf=" SubmitForm && password?.['errors']?.['required']">Password is required</div> -->
+      </div>
+      <div class="input-box button">
+        <input type="Submit" value="Login Now">
+      </div>
+      <div class="text">
+        <a (click)="ForgetPassword(loginForm)">Forget
+          Password?</a>
+      </div>
+      <div class="text">
+        <h3>You have an account? <a routerLink="/signin">Signin now</a></h3>
+      </div>
+    </form>
+
+  </div>
+
+
+</div>
+
+<div *ngIf="loader" class="loader">
+  <app-loader></app-loader>
+</div>
+
+
+
+<div class="Forget_Bg" *ngIf="ForegetFormsData">
+  <div class="Forget_Data">
+
+    <h1>Forget Password</h1>
+    <form action="" #ForgetForm='ngForm' (ngSubmit)="Forget(ForgetForm)">
+      <div>
+        <input class="input-box1" type="text" placeholder="Enter your name" required ngModel name="Login_Username"
+          required>
+
+        <!-- <div class="error_message" *ngIf="SubmitForm && name?.invalid  && name?.['errors']?.['required']">Uesrname is required</div> -->
+      </div>
+      <div class="input_forget">
+        <button type="Submit" data-bs-toggle="modal" data-bs-target="#OTPPOPUP">Submit!!!</button>
+      </div>
+    </form>
+    <i (click)="close()" class="bi bi-x"></i>
+  </div>
+</div>
+
+<!--  OTP Code -->
+<div *ngIf="MailOtpPopUP">
+
+  <div class="modal fade" id="OTPPOPUP" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">OTP</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body OTP">
+          <div class="mb-3">
+            <input type="text" maxlength="1" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <input type="text" maxlength="1" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <input type="text" maxlength="1" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <input type="text" maxlength="1" class="form-control" id="recipient-name">
+          </div>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"
+            >Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

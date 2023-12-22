@@ -1,0 +1,57 @@
+.Houses-List {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+    padding: 20px;
+
+    .rsk {
+        box-shadow: 0px 0px 8px 1px #000;
+        width: 22%;
+        border-radius: 3px;
+        background-color: #fff;
+        .one {
+            height: 150px;
+             img {
+                width: 100%;
+                height: 100%;
+                border-radius: 3px 3px 0 0;
+            }
+        }
+
+       
+
+        .Maintain_House {
+            text-align: center;
+            margin: 13px;
+
+            .House-Name {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .btn {
+                background: #009587;
+                border-radius: 8px;
+                border: none;
+                margin: 8px 7px;
+                padding: 5px 21px;
+            }
+        }
+    }
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000038;
+  }
+  body.dark-mode {
+    background: #1b80d8;
+    color: #000;
+  }

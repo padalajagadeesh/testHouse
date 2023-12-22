@@ -1,0 +1,212 @@
+<div class="House-Details_Page">
+    <div *ngFor="let a of DetailsArray">
+        <div class="Location_Near" *ngIf="productID != a.id">
+            <p>{{a.AddressInfo.LandMark}}</p>
+            <p>Near Location</p>
+        </div>
+
+        <div class="Rent_Deposit">
+            <div>
+                <span>&#8377;{{a.PriceInfo.Price}}</span>
+                <p>Rent</p>
+            </div>
+            <div>
+                <span>&#8377;{{a.PriceInfo.Security}}</span>
+                <p>Deposite</p>
+            </div>
+            <div>
+                <span>{{a.PriceInfo.BuiltArea}} sqft</span>
+                <p>Builtup</p>
+            </div>
+        </div>
+
+        <div class="House_Information">
+            <div class="House_Image" *ngIf="a.Photos.file">
+                <img [src]="a.Photos.file
+                " alt="">
+            </div>
+            <div class="House_Image" *ngIf="!a.Photos.file">
+                <img src="assets/House-images/download.png" alt="">
+            </div>
+            <div class="details">
+                <div class="furniture-data">
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-loveseat"></i>{{a.BasicInfo.FType}} Furniture</span>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-house"></i> &nbsp;{{a.BasicInfo.BHK}} BHK</span>
+                        <p>{{a.BasicInfo.PType}} Type</p>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-users"></i> &nbsp;Family</span>
+                        <p>Prefered Tenants</p>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-key"></i> &nbsp;Ready to Move</span>
+                        <p>Avalible From</p>
+                    </div>
+                </div>
+                <div class="view-furniture">
+                    <button class="view-button">Get Owner details</button>
+                    <button class="view-icon"><i (click)="GetSelectFave()"
+                            [ngClass]="selectFav ? 'favcolor':'Dummycolor'" class="fa-solid fa-heart"></i></button>
+                    <button class="view-icon"><i class="fa-brands fa-font-awesome"></i></button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label for="exampleSelect1" class="label">ProgramCategory </label>
+        <div class="row">
+            <div class="col-sm-9">
+                <select class="form-control" (change)="PriceList()" [(ngModel)]="amount">
+                    <option value="Select Price" disabled selected>Select Price</option>
+                    <option value="3000-6000">3000-6000</option>
+                    <option value="6000-10000">6000-10000</option>
+                    <option value="10000-20000">10000-20000</option>
+                    <option value="20000-30000">20000-30000</option>
+                    <option value="30000-40000">30000-40000</option>
+                    <option value="40000-50000">40000-50000</option>
+                    <option value="50000-100000">50000-100000</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <h1>{{ BHKArray | json}}hello</h1> -->
+
+<div class="House-Details_Page" *ngFor="let a of SelectedBHK let i= index;">
+    <div *ngIf="productID != a._id">
+        <div class="Location_Near">
+            <p>{{a.AddressInfo.LandMark}}</p>
+            <p>Near Location</p>
+        </div>
+
+        <div class="Rent_Deposit">
+            <div>
+                <span>&#8377;{{a.PriceInfo.Price}}</span>
+                <p>Rent</p>
+            </div>
+            <div>
+                <span>&#8377;{{a.PriceInfo.Security}}</span>
+                <p>Deposite</p>
+            </div>
+            <div>
+                <span>{{a.PriceInfo.BuiltArea}} sqft</span>
+                <p>Builtup</p>
+            </div>
+        </div>
+
+        <div class="House_Information">
+            <div class="House_Image" *ngIf="a.Photos.file">
+                <img [src]="a.Photos.file
+                " alt="">
+            </div>
+            <div class="House_Image" *ngIf="!a.Photos.file">
+                <img src="assets/House-images/download.png" alt="">
+            </div>
+            <div class="details">
+                <div class="furniture-data">
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-loveseat"></i>{{a.BasicInfo.FType
+                            }}</span>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-house"></i> &nbsp;{{a.BasicInfo.BHK}} BHK</span>
+                        <p>{{a.BasicInfo.PType}}</p>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-users"></i> &nbsp;Family</span>
+                        <p>Prefered Tenants</p>
+                    </div>
+                    <div class="Furniture_Details">
+                        <span><i class="fa-solid fa-key"></i> &nbsp;Ready to Move</span>
+                        <p>Avalible From</p>
+                    </div>
+                </div>
+                <div class="view-furniture">
+                    <button class="view-button" data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                        (click)="GetOwnerDetails()">Get Owner details</button>
+                    <button class="view-icon"><i (click)="TotalDataFav(i)"
+                            [ngClass]="a.selectFav ? 'favcolor':'Dummycolor'"
+                            class="fa-solid fa-heart"></i></button>{{a.selectFav}}***
+                    <button class="view-icon"><i class="fa-brands fa-font-awesome"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Button trigger modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Phone:</label>
+                    <input type="text" (keypress)="onlyNumberKey($event)" maxlength="10" [(ngModel)]="searchValue"
+                        class="form-control" id="recipient-name">
+                </div>
+                <div *ngIf="error">
+                    form is required
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModa"
+                    (click)="SubmitNumber()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="otpmodal" class="modal fade" id="exampleModa" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">OTP</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body OTP">
+                <div class="mb-3">
+                    <input type="text" (keypress)="onlyNumberKey($event)" maxlength="1" [(ngModel)]="OTP1"
+                        class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" (keypress)="onlyNumberKey($event)" maxlength="1" [(ngModel)]="OTP2"
+                        class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" (keypress)="onlyNumberKey($event)" maxlength="1" [(ngModel)]="OTP3"
+                        class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" (keypress)="onlyNumberKey($event)" maxlength="1" [(ngModel)]="OTP4"
+                        class="form-control" id="recipient-name">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="sendOtp()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

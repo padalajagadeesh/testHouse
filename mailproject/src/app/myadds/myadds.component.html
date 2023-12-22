@@ -1,0 +1,43 @@
+<div class="main" *ngFor="let adds of myaddsData">
+    <ul class="cards">
+        <li class="cards_item">
+            <div class="card">
+                <!-- <div class="card_image"><img src="ps://assets.codepen.io/652/photo-1468777675496-5782faaea55b.jpeg"
+                        alt="mixed vegetable salad in a mason jar. "></div> -->
+                <div class="card_image" *ngIf="adds.Photos.file"><img src={{adds.Photos.file}} alt="mixed vegetable salad in a mason jar."></div>
+                <div class="card_image" *ngIf="!adds.Photos.file"><img src="assets/House-images/download.png" alt="mixed vegetable salad in a mason jar."></div>
+                <div class="card_content">
+                    <p class="card_title">{{adds.username}}</p>
+                    <div class="card_text">
+                        <div class="dummy">
+                            <div>
+                                <p>{{adds.BasicInfo.BHK}} &nbsp; BHK</p>
+                                <p><span>PropertyType:</span> &nbsp;{{adds.BasicInfo.PType}}</p>
+                                <p><span>Furniture Type:</span> &nbsp;{{adds.BasicInfo.FType}}</p>
+                                <p><span> Rent:</span> &nbsp;&#x20b9;{{adds.PriceInfo.Price}}</p>
+                                <p><span> Security:</span> Security: &nbsp;&#x20b9;{{adds.PriceInfo.Security}}</p>
+                                <p><span> Maintenance:</span> &nbsp;&#x20b9;{{adds.PriceInfo.Maintenance}}</p>
+                                <p><span> Built Area: </span>&nbsp;{{adds.PriceInfo.BuiltArea}}</p>
+                                <p><span>Carpet Area:</span> &nbsp;{{adds.PriceInfo.CarpetArea}}</p>
+                            </div>
+                            <div>
+                                <p><span>Floor:</span>&nbsp;{{adds.AddressInfo.FloorNo}}</p>
+                                <p><span>Total Floor: </span>&nbsp;{{adds.AddressInfo.TotalFloor}}</p>
+                                <p><span>Main Entrance:</span> &nbsp;{{adds.PriceInfo.MainEntrance}}</p>
+                                <p><span>City:</span>{{adds.BasicInfo.City}}</p>
+                                <p><span>Address:</span> &nbsp;{{adds.AddressInfo.Address}}</p>
+                                <p><span>Landmark:</span> &nbsp;{{adds.AddressInfo.LandMark}}</p>
+                                <p><span>Ready to Move:</span> &nbsp;{{adds.OtherInfo.RTM}}</p>
+                                <p><span>Establi Date:</span> &nbsp;{{adds.OtherInfo.PossessionOn | date}}</p>
+                                <p><span>Gated Community:</span> &nbsp;{{adds.OtherInfo.Gated}}</p>
+                            </div>
+                        </div>
+                        <p>Served with your choice of dressing on the side: housemade ranch, cherry balsamic
+                            vinaigrette, creamy chipotle, avocado green goddess, or honey mustard. Add your choice of
+                            protein for $2 more. </p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

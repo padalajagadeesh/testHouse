@@ -1,0 +1,108 @@
+.House-Details_Page {
+    box-shadow: 0 0 1px 0px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-top: 39px;
+    .Location_Near {
+        background-color: rgb(248 248 248);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .Rent_Deposit {
+        display: flex;
+        justify-content: space-around;
+        padding: 7px 0;
+        text-align: center;
+        border: 1px solid #cbc6c6;
+        border-right: none;
+        border-left: none;
+
+        div {
+            width: 30%;
+            border-right: 1px solid #bfb8b8;
+        }
+
+        :nth-last-child(1) {
+            border: none;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+    }
+
+    .House_Information {
+        display: flex;
+
+        .House_Image {
+            box-shadow: 0 0 2px 0;
+            width: 30%;
+            height: 180px;
+            margin: 12px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .details {
+            width: 65%;
+            margin: 12px;
+
+            .furniture-data {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 6px;
+                border: 1px solid #80808096;
+
+                .Furniture_Details {
+                    box-shadow: 0 0 2px;
+                    padding: 14px 10px;
+                    width: 50%;
+                }
+
+            }
+            .view-furniture {
+                display: flex;
+                margin: 13px 0px 0px;
+                justify-content: space-between;
+
+                .view-button {
+                    width: 55%;
+                    padding: 7px;
+                    background-color: #fd3752;
+                    border: none;
+                    color: white;
+                    font-weight: 700;
+                }
+                .view-icon {
+                    border: 1px solid #c7bcbc;
+                    width: 14%;
+                    padding: 7px;
+
+                    i {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000038;
+  }

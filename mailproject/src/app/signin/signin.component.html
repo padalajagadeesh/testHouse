@@ -1,0 +1,40 @@
+<div class="Container">
+  <div class="wrapper">
+    <h2>Registration</h2>
+    <form action="#" [formGroup]="signin">
+      <div class="input-box">
+        <input type="text" placeholder="Enter your name" formControlName="Username"
+          [style.color]="!signin.value.Username ?'black':null" required>
+        <div class="error_message" *ngIf="SubmitForm && name?.['errors']?.['required']">Uesrname is required</div>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Enter your email" formControlName="Email" required>
+        <div class="error_message" *ngIf="SubmitForm  && email?.['errors']?.['required']">Email is required</div>
+        <div class="error_message" *ngIf="SubmitForm && email?.invalid  && email?.['errors']?.['pattern']">Enter Valid
+          Email</div>
+      </div>
+      <div class="input-box password">
+        <input [type]="password" placeholder="Create password" formControlName="Password" required>
+        <div class="error_message" *ngIf=" SubmitForm && passwordd?.['errors']?.['required']">Password is required</div>
+        <button (click)="onClick()">
+          <i class="fa-regular fa-eye-slash" aria-hidden="true" *ngIf="!show"></i>
+          <i class="fa-regular fa-eye" aria-hidden="true" *ngIf="show"></i>
+        </button>
+      </div>
+      <!-- Avatar -->
+      <!-- 1/11/2023 change... -->
+      <!-- 111111 -->
+      <!-- <div class="avatar-edit">
+        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)"
+          (click)="fileInput.click()" />
+      </div> -->
+      <!--<div *ngIf="SubmitForm && fileInput">Photo is required</div> -->
+      <div class="input-box button">
+        <input type="Submit" (click)="SigninForm()" value="Register Now">
+      </div>
+      <div class="text">
+        <h3>Already have an account? <a routerLink="/login">Login now</a></h3>
+      </div>
+    </form>
+  </div>
+</div>

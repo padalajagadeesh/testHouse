@@ -1,0 +1,62 @@
+<div class="col-sm-3">
+    <div class="form-group">
+        <label for="exampleSelect1" class="label">SearchFilter</label>
+        <div class="row">
+            <div class="col-sm-9">
+                <input type="text" class="form-control" [(ngModel)]="filterBy" (keyup)="SearchFilter()">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label for="exampleSelect1" class="label">Select Category</label>
+        <div class="row">
+            <div class="col-sm-9">
+                <select class="form-control" (change)="SelectDropDownData()" [(ngModel)]="selectdata">
+                    <option value="Select House" disabled selected>Select House</option>
+                    <option value="1">1 BHK </option>
+                    <option value="2">2 BHK </option>
+                    <option value="3">3 BHK </option>
+                    <option value="4">4 BHK </option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="form-group">
+        <label for="exampleSelect1" class="label">Rent Filter </label>
+        <div class="row">
+            <div class="col-sm-9">
+                <select class="form-control" (change)="PriceList()" [(ngModel)]="amount">
+                    <option value="Select Price" selected>Select Price</option>
+                    <option value="3000-6000">3000-6000</option>
+                    <option value="6000-10000">6000-10000</option>
+                    <option value="10000-20000">10000-20000</option>
+                    <option value="20000-30000">20000-30000</option>
+                    <option value="30000-40000">30000-40000</option>
+                    <option value="40000-50000">40000-50000</option>
+                    <option value="50000-100000">50000-100000</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Houses-List">
+    <div class="rsk" *ngFor="let data of array">
+        <div class="one" *ngIf="data.Photos.file"><img src="{{data.Photos.file}}" alt="no image"></div>
+        <div class="one" *ngIf="!data.Photos.file"><img src="assets/House-images/download.png"></div>
+        <div class="Maintain_House">
+            <div class="House-Name">{{data.Housename}}</div>
+            <div> {{data.BasicInfo.BHK}} BHK</div>
+            <div>{{data.PriceInfo.Price}}</div>
+            <button (click)="GotoDetailsPage(data)" class="btn btn-primary">View</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="array.length <= 0" class="loader">
+    <app-loader></app-loader>
+</div>
