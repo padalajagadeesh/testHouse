@@ -4,7 +4,7 @@ import { AlertyfyService } from './services/alertyfy.service';
 import { AuthService } from './services/auth.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CommonService } from './services/common.service';
-import { Dropdown } from 'bootstrap'
+import { Dropdown } from 'bootstrap';
 import { Store } from '@ngrx/store';
 import { houseData, registerApiData } from './store/house.selector';
 import { signdataSuccess, signinload } from './store/house.action';
@@ -33,7 +33,7 @@ export class AppComponent {
   LoginUserData: any = [];
   Dark_Mode:boolean=false;
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
-  isShow: boolean;
+  isShow: boolean=false;
   topPosToStartShowing = 100;
 
 

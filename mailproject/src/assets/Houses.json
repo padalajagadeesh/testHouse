@@ -1,0 +1,313 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 6000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Anadu Nilayam",
+            "images": [
+                "assets/House-images/1BHK-House1.jfif"
+            ],
+            "Owner":"Raghu",
+            "Deposit":2000,
+            "square":6500,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+            
+        },
+        {
+            "id": 2,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 8000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Nirmala House",
+            "images": [
+                "assets/House-images/1BHK-House2.jfif"
+            ],
+            "Owner":"Sai Ram",
+            "Deposit":2500,
+            "square":5500,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+
+        },
+        {
+            "id": 3,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 12000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Gadhwal House",
+            "Owner":"Vikram",
+            "Deposit":2000,
+            "images": [
+                "assets/House-images/1BHK-House2.jfif"
+            ],
+            "square":3000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 4,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 18000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"RGV Den",
+            "Owner":"kishor",
+            "Deposit":3000,
+            "images": [
+                "assets/House-images/1BHK-House3.jfif"
+            ],
+            "square":2000 ,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 5,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 16500,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Sandeep Nilayam",
+            "Owner":"Suresh",
+            "Deposit":1500,
+            "images": [
+                "assets/House-images/1BHK-House4.jfif"
+            ],
+            "square":2000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"House"
+        },
+        {
+            "id": 6,
+            "title": "1 BHK Flat",
+            "description": "Family House",
+            "Rent": 22500,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Bhasker House",
+            "Owner":"Athul",
+            "Deposit":2000,
+            "images": [
+                "assets/House-images/1BHK-House5.jfif"
+            ],
+            "square":7000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 7,
+            "title": "2 BHK Flat",
+            "description": "Family House",
+            "Rent": 28000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Vinay Home",
+            "Owner":"Manoj",
+            "Deposit":3000,
+            "images": [
+                "assets/House-images/2BHK-House1.jfif"
+            ],
+            "square":4200 ,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 8,
+            "title": "2 BHK Flat",
+            "description": "Family House",
+            "Rent": 6300,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Brahma House",
+            "Owner":"Chinna Krishna",
+            "images": [
+                "assets/House-images/2BHK-House2.jfif"
+            ],
+            "Deposit":2800,
+            "square":5400 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 9,
+            "title": "2 BHK Flat",
+            "description": "Family House",
+            "Rent": 46000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Thirupathi Mandhiram",
+            "Owner":"Eswar",
+            "images": [
+                "assets/House-images/2BHK-House3.jfif"
+            ],
+            "Deposit":3500,
+            "square":6000 ,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 10,
+            "title": "2 BHK Flat",
+            "description": "Family House",
+            "Rent": 11000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Tharun House",
+            "Owner":"Prasanth",
+            "images": [
+                "assets/House-images/2BHK-House4.jfif"
+            ],
+            "Deposit":3900,
+            "square":1400 ,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 11,
+            "title": "2 BHK Flat",
+            "description": "Family House",
+            "Rent": 3000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"SR Metro station",
+            "maintanance":"500",
+            "Housename":"Ajay House",
+            "Owner":"chainthanya",
+            "images": [
+                "assets/House-images/2BHK-House5.jfif"
+            ],
+            "Deposit":4000,
+            "square":20000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 12,
+            "title": "3 BHK Flat",
+            "description": "Family House",
+            "Rent": 25000,
+            "familyDiscount": 10,
+            "rating": 4.6,
+            "near":"Ameerpet Metro station",
+            "maintanance":"500",
+            "Housename":"Jagadheesh House",
+            "Owner":"Jhon cena",
+            "images": [
+                "assets/House-images/3BHK-House1.jfif"
+            ],
+            "Deposit":4200,
+            "square":18000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 13,
+            "title": "3 BHK Flat",
+            "description": "Family House",
+            "Rent": 50000,
+            "familyDiscount": 5,
+            "rating": 4.6,
+            "near":"Begumpet flyower metro piller no 1553",
+            "maintanance":1500,
+            "Housename":"Vinod House",
+            "Owner":"Roman",
+            "images": [
+                "assets/House-images/3BHK-House2.jfif"
+            ],
+            "Deposit":4500,
+            "square":10000 ,
+            "Furniture":"Unfurnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 14,
+            "title": "3 BHK Flat",
+            "description": "Family House",
+            "Rent": 36000,
+            "familyDiscount": 10,
+            "rating": 2.6,
+            "near":"Raidurg Police Station",
+            "maintanance":1000,
+            "Housename":"Arjun House",
+            "Owner":"Dean Ambrose",
+            "images": [
+                "assets/House-images/3BHK-House3.jfif"
+            ],
+             "Deposit":6999,
+             "square":6900 ,
+             "Furniture":"Unfurnished",
+             "apartment":"apartment Type"
+        },
+        {
+            "id": 15,
+            "title": "3 BHK Flat",
+            "description": "Family House",
+            "Rent": 24000,
+            "familyDiscount": 0,
+            "rating": 3.6,
+            "near":"Hitech city flyower",
+            "maintanance":"500",
+            "pincode":5000007,
+            "Housename":"RamCharan House",
+            "Owner":"Keven Owens",
+            "images": [
+                "assets/House-images/3BHK-House4.jfif"
+            ], 
+            "Deposit":15000,
+            "square":12000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        },
+        {
+            "id": 16,
+            "title": "3 BHK Flat",
+            "description": "Family House / Bachelar House",
+            "Rent": 32000,
+            "familyDiscount": 0,
+            "rating": 4.6,
+            "near":"shaikpet Dmart",
+            "maintanance":"500",
+            "pincode":5000008,
+            "Housename":"Swathi Home",
+            "Owner":"Seth Rollins",
+            "images": [
+                "assets/House-images/3BHK-House5.jfif"
+                
+            ],
+            "Deposit":20000,
+            "square":10000 ,
+            "Furniture":"Semi Furnished",
+            "apartment":"apartment Type"
+        }
+    ]
+}

@@ -43,10 +43,13 @@ export class AuthService {
     let UserArray: any = [];
     this.store.select(registerApiData).subscribe((res: any) => {
       UserArray = res;
-      const user1234 = UserArray.find((p: any) =>
-        p.Email === user.Login_Username
+      console.log(UserArray,'46:::')
+      const user1234 = UserArray.find((p: any) =>{
+        console.log( p.Email ,'50',p.Email === user.Login_Username,'51:::',user.Login_Username)
+      return  p.Email === user.Login_Username
+      }
       )
-      this.forgetUser.next(user1234)
+      this.forgetUser.next(user1234);
     })
   }
   // updateMango(data: any) {

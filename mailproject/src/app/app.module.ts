@@ -33,6 +33,8 @@ import { api_Reducer } from './store/house.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { ApiEffects } from './store/house.effects';
 import { DarkModeToggleComponent } from './dark-mode-toggle/dark-mode-toggle.component';
+import { NgxOtpInputModule } from 'ngx-otp-input';
+
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import { DarkModeToggleComponent } from './dark-mode-toggle/dark-mode-toggle.com
     HttpClientModule,
     TabsModule.forRoot(),
     BsDatepickerModule,
+    NgxOtpInputModule,
     NgxGalleryModule,
     FileUploadModule,
     BsDropdownModule,

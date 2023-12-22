@@ -7,3 +7,32 @@
 
 @import 'assets/forms.css';
 @import 'assets/tabs.css';
+
+
+
+html {
+    background: var(--theme-background);
+    color: var(--theme-color);
+    transition: all ease-in-out 400ms;
+  }
+  :root {
+    --theme-background: white;
+    --theme-color: rgb(184, 37, 37);
+  }
+  :root[theme=dark] {
+    --theme-background: #222226;
+    --theme-color: rgba(255,255,255,.75);
+  }
+  body.dark-mode {
+    background: #1d2a35;
+    color: #000;
+    .label{
+      color: #fff;
+    }
+    .House-Details_Page{
+      color: #fff;
+    }
+    .Location_Near{
+      color: #000;
+    }
+  }

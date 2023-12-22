@@ -89,3 +89,8 @@
     </div>
   </div>
 </div>
+<div class="otp-box" *ngIf="Otpmtk">
+  <ngx-otp-input [config]="otpInputConfig" (otpChange)="handeOtpChange($event)" (fill)="handleFillEvent($event)">
+  </ngx-otp-input>
+  <button (click)="submitotp()">Submit</button>
+</div>

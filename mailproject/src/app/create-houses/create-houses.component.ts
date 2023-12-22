@@ -27,8 +27,8 @@ export class CreateHousesComponent {
     property = new Property();
 
     // Will come from masters
-    propertyTypes: Ikeyvaluepair[];
-    furnishTypes: Ikeyvaluepair[];
+    'propertyTypes': Ikeyvaluepair[];
+    'furnishTypes': Ikeyvaluepair[];
     PropertyData = ['House', 'ApartMent', 'Delux'];
     furnishTypess = ['Fully', 'Semi', 'UnFurniture']
     cityList: any[] | undefined;
