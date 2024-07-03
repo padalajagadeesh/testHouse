@@ -35,7 +35,6 @@ import { ApiEffects } from './store/house.effects';
 import { DarkModeToggleComponent } from './dark-mode-toggle/dark-mode-toggle.component';
 import { NgxOtpInputModule } from 'ngx-otp-input';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +69,7 @@ import { NgxOtpInputModule } from 'ngx-otp-input';
     BrowserAnimationsModule,
     StoreModule.forRoot({data:api_Reducer}),
     EffectsModule.forRoot([ApiEffects]),
+    
   ],
   providers: [GuardGuard,AuthService,AlertyfyService,DatePipe],
   bootstrap: [AppComponent]

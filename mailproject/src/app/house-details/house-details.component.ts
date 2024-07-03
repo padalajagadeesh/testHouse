@@ -50,12 +50,6 @@ export class HouseDetailsComponent {
   }
 
   ngOnInit() {
-    // this.store.dispatch(loadApi());
-    // this.store.select(houseData).subscribe((res) =>{
-    //   console.log(res,'56-=-=-=')
-    // })
-    // this.service.getDBHouseData().subscribe((res: any) => {
-    // this.store.dispatch(loadApi());
     this.store.select(houseData).subscribe((res) => {
       this.MainData = res;
       this.MainData.filter((val: any) => {
@@ -64,9 +58,6 @@ export class HouseDetailsComponent {
         }
       })
     })
-
-    // this.service.getDBHouseData().subscribe((res: any) => {
-    // this.store.dispatch(loadApi());
     this.store.select(houseData).subscribe((res) => {
       this.data = JSON.parse(JSON.stringify(res));
       this.data.filter((val: any) => {
@@ -77,10 +68,6 @@ export class HouseDetailsComponent {
         })
       })
     })
-    // this.SelectedBHK.forEach((val: any, i: any) => {
-    //   // console.log(this.SelectedBHK,'866666...',this.SelectedBHK[i]['selectFav'] = false)
-    //   // this.SelectedBHK[i]['selectFav'] = false;
-    // })
   }
   PriceList() {
     let val1 = Number(this.amount.split('-')[0]);
@@ -100,7 +87,6 @@ export class HouseDetailsComponent {
 
   TotalDataFav(a: any) {
     this.SelectedBHK.forEach((val: any, i: any) => {
-      console.log(val, '103::::')
       if (a == i && !val.selectFav) {
         this.SelectedBHK[i]['selectFav'] = true;
         this.service.updateFavData({ username: val.username, selectFav: true }).subscribe();
@@ -110,7 +96,6 @@ export class HouseDetailsComponent {
 
       }
     })
-    // this.service.favouriteData(this.SelectedBHK.filter((val: any) => val.selectFav));
   }
   GetOwnerDetails() {
     this.otpmodal = true;

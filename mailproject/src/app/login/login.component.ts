@@ -48,11 +48,15 @@ export class LoginComponent {
     this.activatedRoute.queryParamMap.subscribe(params => {
       this.retUrl = params.get('retUrl');
     });
+    // this.store.select(registerApiData).subscribe((res: any) => {
+
+    //   console.log(res,'82222')
+    // })
   }
   OnLogin(loginForm: NgForm) {
-    console.log(loginForm, '39:::')
     this.authService.addUsers(loginForm.value)
     this.authService.userData.subscribe((res: any) => {
+      console.log(res,'5999::::::')
       const user = res
       if (user) {
         this.loader = true;
@@ -71,30 +75,23 @@ export class LoginComponent {
     })
   }
   ForgetPassword(loginForm: NgForm) {
-    console.log('11111')
     this.ForegetFormsData = true;
-    // this.otpmodal =true;
   }
   
   Forget(ForgetForm: NgForm) {
-    // this.MailOtpPopUP 
     this.loader = false;
     this.ForegetFormsData = false;
     this.Otpmtk = true;
    
-    // this.authService.ForgetgetData(ForgetForm.value);
     this.store.select(registerApiData).subscribe((res: any) => {
-      console.log(res,'81::::')
       const user = res.find((res:any)=> res.Email === ForgetForm.value.Login_Username);
       if (user?.Email) {
         this.commanservice.sendOtp(ForgetForm.value).subscribe((res)=>{
          this.mailotp = res.OTP;
          this.RegPassword = user.Password;
          this.RegUserName = user.Username
-         console.log(this.mailotp,'otp')
         });
         this.alertyfy.Success('successfully Registeted....');
-        // this.alertyfy.alert(user.Password, user.Username);
         this.ForegetFormsData = false;
       }
       else {
@@ -113,7 +110,6 @@ export class LoginComponent {
 
   handleFillEvent(value: string): void {
     this.otpdata = value;
-    console.log(value, '21');
   }
   submitotp() {
     if( this.mailotp === this.otpdata){
@@ -127,3 +123,4 @@ export class LoginComponent {
     this.ForegetFormsData = false;
   }
 }
+

@@ -29,7 +29,6 @@ export class SigninComponent {
     private store: Store, private commonservice :CommonService){}
   ngOnInit(){
     this.signin = this.fb.group({
-      // file: ['',Validators.required] 1111,
       Username:['',Validators.required],
       Email:['',Validators.compose([Validators.required,Validators.pattern(this.emailRegEx)])],
       Password: ['', Validators.compose([Validators.required,Validators.minLength(3)])]
@@ -47,19 +46,10 @@ export class SigninComponent {
     return this.signin.get('Password')
   }
   SigninForm(){
-    console.log(this.SignInForm_Data,'50::')
-    console.log(this.signin.controls?.['Username'].value,'42::::',this.signin)
-
     this.SubmitForm = true;
-    //  this.service.updateMango(this.signin.value)
     if(this.signin.status === 'VALID'){
-      // console.log(this.signin.status)
-      // let data:any = localStorage.getItem('data') || '[]';
-      // this.register = JSON.parse(data);
       this.commonservice.updateRegisterData(this.signin.value).subscribe();
-      console.log(this.register,'123',this.signin.controls?.['Username'].value);
      this.SignInForm_Data= this.register.push(this.signin.value);
-      // localStorage.setItem('data',JSON.stringify(this.register));
       this.route.navigate(['login'])
       alertyfy.success('successfully Registeted....');
     }
@@ -74,12 +64,9 @@ export class SigninComponent {
     if (event.target.files && event.target.files[0]) {
       reader.readAsDataURL(file);
       reader.onload = () => {
-        console.log(reader.result,'67---')
         this.signin.patchValue({
           file:reader.result,
-        });
-        console.log(file,'7000++')
-      
+        });      
       }
     }
   }
@@ -87,7 +74,6 @@ export class SigninComponent {
   //Password 
   onClick() {
     if (this.password=== 'password') {
-      // this.show ?'fa-regular fa-eye-slash':'fa-regular fa-eye';
       this.password = 'text';
       this.show = true;
     } else {

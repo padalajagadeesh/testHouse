@@ -33,8 +33,6 @@
   <app-loader></app-loader>
 </div>
 
-
-
 <div class="Forget_Bg" *ngIf="ForegetFormsData">
   <div class="Forget_Data">
 
@@ -47,14 +45,14 @@
         <!-- <div class="error_message" *ngIf="SubmitForm && name?.invalid  && name?.['errors']?.['required']">Uesrname is required</div> -->
       </div>
       <div class="input_forget">
-        <button type="Submit" data-bs-toggle="modal" data-bs-target="#OTPPOPUP">Submit!!!</button>
+        <button type="Submit" data-bs-toggle="modal" data-bs-target="#OTPPOPUP">Submit</button>
       </div>
     </form>
     <i (click)="close()" class="bi bi-x"></i>
   </div>
 </div>
 
-<!--  OTP Code -->
+<!--  OTP Code.... -->
 <div *ngIf="MailOtpPopUP">
 
   <div class="modal fade" id="OTPPOPUP" tabindex="-1" aria-labelledby="exampleModalLabel"

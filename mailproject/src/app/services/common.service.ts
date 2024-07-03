@@ -33,7 +33,6 @@ export class CommonService implements OnInit {
   // <><><><>.
 
   favouriteData(val: any) {
-    console.log([...this.data],'35:::::',this.data)
     this.data = [...this.data , ...val]
      this.Favourite.next(this.data);
   }
@@ -54,7 +53,6 @@ export class CommonService implements OnInit {
     return this.http.get('http://192.168.10.14:3000/api/register');
   }
   updateRegisterData(data: any) {
-    console.log(data, '38::')
     return this.http.post('http://192.168.10.14:3000/api/update/register', data);
   }
 
@@ -64,20 +62,17 @@ export class CommonService implements OnInit {
     return this.http.get('http://192.168.10.14:3000/api/house');
   }
   updateHouseData(data: any) {
-    console.log(data, '48:::::')
     return this.http.post('http://192.168.10.14:3000/api/update/house', data);
   }
 
   //Fav Data
 
   updateFavData(data: any) {
-    console.log(data, '48:::::')
     return this.http.post('http://192.168.10.14:3000/api/update/favdata', data);
   }
 
   // Forget Password post call....
   sendOtp(to: string): Observable<any> {
-    console.log(to,'21::::')
     return this.http.post(`${this.apiUrl}/send-otp`, { to });
   } 
 }

@@ -14,11 +14,9 @@ export class GuardGuard  {
       if (!this.authService.isUserLoggedIn()) {
         alert("You are not allowed to view this page.\nYou are redirected to login Page");  
         this.router.navigate(["login"],{ queryParams: { retUrl: route.url} });  
-        console.log('Else Part')
         return false;
       } 
       else{
-        console.log('Else Part')
         return true;
       }
   }

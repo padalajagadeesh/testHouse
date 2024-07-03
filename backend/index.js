@@ -140,9 +140,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-otp', (req, res) => {
-    // const { to } = req.body;
     console.log(req.body.to,'21::::',req.body)
-
   const otp = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit OTP
 
   const mailOptions = {

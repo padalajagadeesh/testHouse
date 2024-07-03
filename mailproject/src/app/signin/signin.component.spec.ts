@@ -48,8 +48,6 @@ describe('SigninComponent', () => {
     component.signin.status === 'VALID';
     spyOn(localStorage, 'setItem');
     component.SigninForm(); // Replace with the actual method or function containing the given code
-    // expect(localStorage.setItem).toHaveBeenCalledWith('form-data', JSON.stringify(component.arr));
-    // expect(console.log).toHaveBeenCalledWith(component.signin.value, '21:::');
   });
 
   it('should skip the if block when signin status is not VALID', () => {

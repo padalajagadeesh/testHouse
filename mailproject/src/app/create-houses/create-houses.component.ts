@@ -55,7 +55,6 @@ export class CreateHousesComponent {
         private commonservice: CommonService,
     ) { }
     ngOnInit() {
-        console.log(this.addPropertyForm, '111')
         this.addPropertyForm = this.fb.group({
             BasicInfo: new FormGroup({
                 SellRent: new FormControl('', Validators.required),
@@ -235,32 +234,15 @@ get Maintenance() {
     }
 
     onSubmit() {
-        console.log(this.addPropertyForm.value, '206:::')
         this.nextClicked = true;
         this.commonservice.UserLogin.subscribe((res) => {
             this.array = res;
         })
         if (this.allTabsValid()) {
-            console.log(this.allTabsValid, '100');
             this.commonservice.updateHouseData({ ...this.addPropertyForm.value, username: this.array.Username }).subscribe();
-            // this.commonservice.updateRegisterData(this.addPropertyForm.value).subscribe();
             this.router.navigate(['House']);
-            // this.mapProperty();
-            // this.housingService.addProperty(this.property).subscribe(
-            //     () => {
-            //         console.log(this.addPropertyForm);
-
-            //         if (this.SellRent.value === '2') {
-            //             this.router.navigate(['/rent-property']);
-            //         } else {
-            //             this.router.navigate(['/']);
-            //         }
-            //     }
-            // );
-
         } else {
 
-            console.log('else.......')
         }
     }
 
@@ -268,21 +250,17 @@ get Maintenance() {
         this.router.navigate(['/']);
     }
     allTabsValid(): boolean {
-        console.log(this.BasicInfo.value, '2222:::', this.RentInfo)
 
         if (this.BasicInfo.invalid) {
-            console.log(this.BasicInfo.value, '236:::')
             this.formTabs.tabs[0].active = true;
             return false;
         }
 
         if (this.PriceInfo.invalid) {
-            console.log(this.PriceInfo.value, '242:::')
             this.formTabs.tabs[1].active = true;
             return false;
         }
         if (this.RentInfo.invalid) {
-            console.log(this.RentInfo.value, '242:::')
             this.formTabs.tabs[1].active = true;
             return false;
         }
@@ -304,8 +282,6 @@ get Maintenance() {
     }
 
     selectTab(NextTabId: number, IsCurrentTabValid: boolean) {
-        console.log(NextTabId, '266',IsCurrentTabValid,this.formTabs,this.addPropertyForm,this.BasicInfo.controls['SellRent'].value
-        )
         this.nextClicked = true;
         if (IsCurrentTabValid) {
             this.formTabs.tabs[NextTabId].active = true;
