@@ -38,7 +38,7 @@ async function createHouseDb() {
 
 // SOCKET CONNECTION PORT
 
-server.listen(port, '192.168.10.14', () => {
+server.listen(port, () => {
   console.log(`started on port: ${port}`);
 });
 

@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class CommonService implements OnInit {
   data: any=[];
-  private apiUrl = 'http://192.168.10.14:3000';
+  private apiUrl = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
     this.getHouseData(eval);
@@ -50,25 +50,25 @@ export class CommonService implements OnInit {
   // <<< DB register Data >>>
 
   registerData() {
-    return this.http.get('http://192.168.10.14:3000/api/register');
+    return this.http.get('http://localhost:3000/api/register');
   }
   updateRegisterData(data: any) {
-    return this.http.post('http://192.168.10.14:3000/api/update/register', data);
+    return this.http.post('http://localhost:3000/api/update/register', data);
   }
 
   //<<< Upadte House Data >>
 
   getDBHouseData() {
-    return this.http.get('http://192.168.10.14:3000/api/house');
+    return this.http.get('http://localhost:3000/api/house');
   }
   updateHouseData(data: any) {
-    return this.http.post('http://192.168.10.14:3000/api/update/house', data);
+    return this.http.post('http://localhost:3000/api/update/house', data);
   }
 
   //Fav Data
 
   updateFavData(data: any) {
-    return this.http.post('http://192.168.10.14:3000/api/update/favdata', data);
+    return this.http.post('http://localhost:3000/api/update/favdata', data);
   }
 
   // Forget Password post call....
